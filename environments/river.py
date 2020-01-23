@@ -1,10 +1,12 @@
+
+
 from interfaces import IAquatic
 from interfaces import Identifiable
 from interfaces import IContainsAnimals
 from interfaces import IContainsPlants
 from animals import RiverDolphin
 
-
+# Defining the class river and inheriting three interfaces: IContainsAnimals, IContainsPlants, and Identifiable
 class River(IContainsAnimals, IContainsPlants, Identifiable):
 
     def __init__(self):
