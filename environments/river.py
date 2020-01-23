@@ -1,17 +1,22 @@
+
+
 from interfaces import IAquatic
 from interfaces import Identifiable
 from interfaces import IContainsAnimals
 from interfaces import IContainsPlants
 from animals import RiverDolphin
 
-
+# Defining the class river and inheriting three interfaces: IContainsAnimals, IContainsPlants, and Identifiable
 class River(IContainsAnimals, IContainsPlants, Identifiable):
 
+# defines the initial properties of River class
     def __init__(self):
       IContainsAnimals.__init__(self)
       IContainsPlants.__init__(self)
       Identifiable.__init__(self)
 
+# A setter that (add and fix setter decorator syntax)
+# TODO: this needs a getter)
     def add_animal(self, animal):
         try:
             if animal.aquatic and animal.cell_type == "hypertonic":
