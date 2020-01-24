@@ -42,9 +42,9 @@ def main_menu():
     if choice == "4":
         cultivate_new_plant(keahua)
 
-    # if choice == "5":
-    #     build_facility_report(keahua)
-    #     pass
+    if choice == "5":
+        build_facility_report(keahua)
+        pass
 
     # if choice != "6":
     #     main_menu()
