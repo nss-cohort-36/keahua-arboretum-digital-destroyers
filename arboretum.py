@@ -5,21 +5,10 @@ class Arboretum:
         self.address = address
         self.rivers = []
         self.grasslands = []
-
-    
-
-    # def list_instructors(self): 
-    # for instructor in self.instructors:
-    #     print(instructor.firstName)
-
-    # def listRivers(self):
-    #     for river in self.rivers:
-    #         # return f"string interp{river}"
-    #         return river
+        self.mountains = []
+        self.forests = []
+        self.swamps = []
 
     def listRivers(self):
         for river in self.rivers:
             return f"{river}"
-            # return river
-
-        # TODO: missing forest, swamp, mountains
