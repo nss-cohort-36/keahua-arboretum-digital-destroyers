@@ -1,6 +1,6 @@
 
 
-from interfaces import IAquatic
+# from interfaces import IAquatic
 from interfaces import Identifiable
 from interfaces import IContainsAnimals
 from interfaces import IContainsPlants
