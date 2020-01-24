@@ -7,6 +7,7 @@ from actions.annex import annex_habitat
 from actions.release_animal import release_animal
 from actions.report import build_facility_report
 from actions.cultivate_new_plant import cultivate_new_plant
+from actions.feed_animal import feed_animal
 
 # It creates a single instance of the class Arboretum
 keahua = Arboretum("Keahua Arboretum", "123 Paukauila Lane")
@@ -37,7 +38,7 @@ def main_menu():
         release_animal(keahua)
 
     if choice == "3":
-        release_animal(keahua)
+        feed_animal(keahua)
 
     if choice == "4":
         cultivate_new_plant(keahua)

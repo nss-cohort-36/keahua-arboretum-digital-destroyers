@@ -5,4 +5,6 @@ class Arboretum:
         self.address = address
         self.rivers = []
         self.grasslands = []
-        # TODO: missing forest, swamp, mountains
+        self.mountains = []
+        self.forests = []
+        self.swamps = []

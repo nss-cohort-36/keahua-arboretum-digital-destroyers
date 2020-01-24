@@ -20,7 +20,7 @@ def release_animal(arboretum):
 
     choice = input("Choose animal to release > ")
     # logic that creates an instance of the class
-    if choice == "1":
+    if choice == "2":
         animal = RiverDolphin()
     
     # if choice == "2":
