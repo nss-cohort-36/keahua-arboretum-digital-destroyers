@@ -1,6 +1,7 @@
 # should display a list of animals to release
 # from animals import RiverDolphin
 # TODO: import ofther animals
+from animals.river_dolphin import RiverDolphin
 
 # Function of chosing animals to release
 def release_animal(arboretum):
@@ -19,8 +20,8 @@ def release_animal(arboretum):
 
     choice = input("Choose animal to release > ")
     # logic that creates an instance of the class
-    # if choice == "1":
-    #     animal = RiverDolphin()
+    if choice == "1":
+        animal = RiverDolphin()
     
     # if choice == "2":
     #     pass
