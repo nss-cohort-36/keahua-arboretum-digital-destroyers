@@ -5,6 +5,7 @@ import os
 from arboretum import Arboretum
 from actions.annex import annex_habitat
 from actions.release_animal import release_animal
+from plants.plant import Plant
 from actions.report import build_facility_report
 
 # It creates a single instance of the class Arboretum
