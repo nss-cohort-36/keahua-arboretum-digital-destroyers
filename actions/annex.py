@@ -1,6 +1,8 @@
 # list of habitats
 import os
 from environments.river import River
+from environments.grassland import Grassland
+from environments.swamp import Swamp
 from arboretum import Arboretum
 
 # prints list of habitats
@@ -18,8 +20,18 @@ def annex_habitat(arboretum):
     choice = input("Choose your habitat > ")
 
     # conditional that adds a habitat to the appropriate arobertum list
-    # if choice == "2":
-    #     pass
+    if choice == "2":
+        swamp = Swamp("Muddy")
+        arboretum.swamps.append(swamp)
+        arboretum.listSwamps()
+        annex_habitat(arboretum)
+    
+    if choice == "3":
+        grassland = Grassland("Green")
+        arboretum.grasslands.append(grassland)
+        arboretum.listGrasslands()
+        annex_habitat(arboretum)
+    
     if choice == "5":
         river1 = River("Jimmy Dean")
         # print(river)
