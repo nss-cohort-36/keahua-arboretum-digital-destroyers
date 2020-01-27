@@ -12,3 +12,7 @@ class Arboretum:
     def listRivers(self):
         for river in self.rivers:
             print(f"{river}")
+
+    def listGrasslands(self):
+        for grassland in self.grasslands:
+            print(f"{grassland}")
