@@ -8,3 +8,7 @@ class Arboretum:
         self.mountains = []
         self.forests = []
         self.swamps = []
+
+    def listRivers(self):
+        for river in self.rivers:
+            print(f"{river}")
