@@ -25,3 +25,11 @@ class Arboretum:
     def listCoastlines(self):
         for coastline in self.coastlines:
             print(f"{coastline}")
+
+    def listGrasslands(self):
+        for grassland in self.grasslands:
+            print(f"{grassland}")
+
+    def listSwamps(self):
+        for swamp in self.swamps:
+            print(f"{swamp}")
