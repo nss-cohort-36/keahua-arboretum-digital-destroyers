@@ -2,6 +2,7 @@
 import os
 from environments.river import River
 from environments.forest import Forest
+from environments.mountain import Mountain
 from arboretum import Arboretum
 
 # prints list of habitats
@@ -21,11 +22,17 @@ def annex_habitat(arboretum):
     # conditional that adds a habitat to the appropriate arobertum list
     # if choice == "2":
     #     pass
+    if choice == "1":
+        mountain = Mountain("First Option")
+        # print(river)
+        arboretum.mountains.append(mountain)
+        arboretum.listMountains()
+        annex_habitat(arboretum)
 
     if choice == "4":
-        forest4 = Forest("Fourth Option")
+        forest = Forest("Fourth Option")
         # print(river)
-        arboretum.forests.append(forest4)
+        arboretum.forests.append(forest)
         arboretum.listForests()
         annex_habitat(arboretum)
     

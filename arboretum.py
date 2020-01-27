@@ -16,3 +16,7 @@ class Arboretum:
     def listForests(self):
         for forest in self.forests:
             print(f"{forest}")
+
+    def listMountains(self):
+        for mountain in self.mountains:
+            print(f"{mountain}")
