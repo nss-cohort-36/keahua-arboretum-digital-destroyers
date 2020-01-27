@@ -13,6 +13,7 @@ def annex_habitat(arboretum):
     print("4. Forest")
     print("5. River")
     print("6. Coastline")
+    print("7. Return to Main Menu")
 
     choice = input("Choose your habitat > ")
 
@@ -20,7 +21,12 @@ def annex_habitat(arboretum):
     # if choice == "2":
     #     pass
     if choice == "5":
-        river = River()
+        river1 = River("Jimmy Dean")
         # print(river)
-        arboretum.rivers.append(river)
-        print(arboretum.listRivers())
+        arboretum.rivers.append(river1)
+        arboretum.listRivers()
+        annex_habitat(arboretum)
+
+    if choice == "7":
+        import index
+        index.main_menu()

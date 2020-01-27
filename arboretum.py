@@ -11,4 +11,4 @@ class Arboretum:
 
     def listRivers(self):
         for river in self.rivers:
-            return f"{river}"
+            print(f"{river}")
