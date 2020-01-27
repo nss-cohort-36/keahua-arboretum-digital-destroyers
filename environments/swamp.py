@@ -1,24 +1,35 @@
-import sys
-sys.path.append('../')
-
-from environments.environment import Environment
-from interfaces.habitats import IStagnant
-# from animals.
 
 
-class Swamp(Environment):
+# from interfaces import IAquatic
+from interfaces import Identifiable
+from interfaces import IContainsAnimals
+from interfaces import IContainsPlants
 
+# Defining the class river and inheriting three interfaces: IContainsAnimals, IContainsPlants, and Identifiable
+class Swamp(IContainsAnimals, IContainsPlants, Identifiable):
+
+# defines the initial properties of River class
     def __init__(self, name):
+      IContainsAnimals.__init__(self)
+      IContainsPlants.__init__(self)
+      Identifiable.__init__(self)
       self.name = name
-      self.inhabitants = []
-
-    def animal_count(self):
-        return "This place has a bunch of animals in it"
-
-    def addInhabitant(self, item):
-        if not isinstance(item, IStagnant):
-            raise TypeError(f"{item} is not of type IStagnant")
-        self.inhabitants.append(item)
 
     def __str__(self):
-        return self.name
+        return(f"{self.name}")
+
+# A setter that (add and fix setter decorator syntax)
+# TODO: this needs a getter)
+    def add_animal(self, animal):
+        try:
+            if animal.aquatic and animal.cell_type == "hypertonic":
+                self.animals.append(animal)
+        except AttributeError:
+            raise AttributeError("Cannot add aquatic, or saltwater animals to a swamp")
+
+    def add_plant(self, plant):
+        try:
+            if plant.freshwater and plant.requires_current:
+                self.plants.append(plant)
+        except AttributeError:
+            raise AttributeError("Cannot add plants that require brackish water or stagnant water to a swamp biome")
