@@ -45,7 +45,8 @@ def annex_habitat(arboretum):
         forest = Forest("Fourth Option")
         arboretum.forests.append(forest)
         arboretum.listForests()
-    
+        annex_habitat(arboretum)
+        
     if choice == "5":
         river1 = River("Jimmy Dean")
         # print(river)
