@@ -3,6 +3,7 @@ import os
 from environments.river import River
 from environments.forest import Forest
 from environments.mountain import Mountain
+from environments.coastline import Coastline
 from arboretum import Arboretum
 
 # prints list of habitats
@@ -24,14 +25,12 @@ def annex_habitat(arboretum):
     #     pass
     if choice == "1":
         mountain = Mountain("First Option")
-        # print(river)
         arboretum.mountains.append(mountain)
         arboretum.listMountains()
         annex_habitat(arboretum)
 
     if choice == "4":
         forest = Forest("Fourth Option")
-        # print(river)
         arboretum.forests.append(forest)
         arboretum.listForests()
         annex_habitat(arboretum)
@@ -41,6 +40,12 @@ def annex_habitat(arboretum):
         # print(river)
         arboretum.rivers.append(river1)
         arboretum.listRivers()
+        annex_habitat(arboretum)
+
+    if choice == "6":
+        coastline = Coastline("Sixth Option")
+        arboretum.coastlines.append(coastline)
+        arboretum.listCoastlines()
         annex_habitat(arboretum)
 
     if choice == "7":
