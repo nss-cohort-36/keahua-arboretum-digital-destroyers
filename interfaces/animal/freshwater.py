@@ -1,7 +1,7 @@
-# from interfaces import IAquatic
+from interfaces.animal.aquatic import IAquatic
 
-# class IFreshwater(IAquatic):
+class IFreshwater(IAquatic):
 
-#     def __init__(self):
-#         super().__init__()
-#         self.cell_type = "hypertonic"
+    def __init__(self):
+        super().__init__()
+        self.cell_type = "hypertonic"
