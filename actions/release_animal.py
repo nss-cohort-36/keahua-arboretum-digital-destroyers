@@ -16,18 +16,19 @@ def release_animal(arboretum):
     print("6. Ulae")
     print("7. Ope'ape'a")
     print("8. Happy-face Spider")
-    # TODO: insert remianing 6 animals
+
 
     choice = input("Choose animal to release > ")
     # logic that creates an instance of the class
     if choice == "2":
         animal = RiverDolphin()
-    
+
+
     # if choice == "2":
     #     pass
     #  TODO: finish list of animals
 
-    # Iterates & displays through each biome and how many 
+    # Iterates & displays through each biome and how many
     # animals are in the biome
     # for index, river in enumerate(arboretum.rivers):
     #     print(f'{index + 1}. River {river.id}')
