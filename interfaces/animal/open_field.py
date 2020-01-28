@@ -1,3 +1,6 @@
+from interfaces import ITerrestrial
+
+
 class IOpen_Field:
 
     def __init__(self):
