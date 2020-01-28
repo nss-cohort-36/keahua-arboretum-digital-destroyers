@@ -8,6 +8,7 @@ class Arboretum:
         self.mountains = []
         self.forests = []
         self.swamps = []
+        self.coastlines = []
 
     def listRivers(self):
         for river in self.rivers:
@@ -20,3 +21,15 @@ class Arboretum:
     def listSwamps(self):
         for swamp in self.swamps:
             print(f"{swamp}")
+
+    def listMountains(self):
+        for mountain in self.mountains:
+            print(f"{mountain}")
+
+    def listCoastlines(self):
+        for coastline in self.coastlines:
+            print(f"{coastline}")
+
+    def listForests(self):
+        for forest in self.forests:
+            print(f"{forest}")
