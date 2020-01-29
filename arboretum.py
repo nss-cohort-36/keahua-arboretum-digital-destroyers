@@ -19,6 +19,11 @@ class Arboretum:
             for instance in biome:
                 print(f"{instance} {str(instance.id)[:6]} {instance.plants} {instance.animals}")
 
+    def listPlantBiomes(self):
+        for biome in self.biomes:
+            for instance in biome:
+                print(f"{instance} {instance.plants}")
+
     def listRivers(self):
         for river in self.rivers:
             print(f"{river}")
