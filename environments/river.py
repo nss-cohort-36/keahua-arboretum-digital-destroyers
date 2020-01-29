@@ -18,13 +18,6 @@ class River(IContainsAnimals, IContainsPlants, Identifiable):
       self.animals = ["gerbil", "monkey", "tortoise"]
       self.plants = ["River Jade", "Hawain Dew Drop"]
 
-
-    def __str__(self):
-        return(f"{self.name} ({len(self)} animals)")
-
-    def __len__(self):
-        return len(self.animals)
-
 # A setter that (add and fix setter decorator syntax)
 # TODO: this needs a getter)
     def add_animal(self, animal):
