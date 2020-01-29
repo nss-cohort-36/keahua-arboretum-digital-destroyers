@@ -20,10 +20,10 @@ class Forest(IContainsAnimals, IContainsPlants, Identifiable):
 # TODO: this needs a getter)
     def add_animal(self, animal):
         try:
-            if animal.aquatic and animal.cell_type == "hypertonic":
+            if animal.dwell_type == "arboreal":
                 self.animals.append(animal)
         except AttributeError:
-            raise AttributeError("Cannot add aquatic, or saltwater animals to a swamp")
+            raise AttributeError("Cannot add non-forest dwellers to forest")
 
     def add_plant(self, plant):
         try:
@@ -31,3 +31,7 @@ class Forest(IContainsAnimals, IContainsPlants, Identifiable):
                 self.plants.append(plant)
         except AttributeError:
             raise AttributeError("Cannot add plants that require brackish water or stagnant water to a swamp biome")
+
+    def listAnimal(self):
+        for animal in self.animals:
+            print(f"{animal}")

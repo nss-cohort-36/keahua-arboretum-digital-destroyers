@@ -1,6 +1,6 @@
 from .aquatic import IAquatic
 
-class ISalt-fresh(IAquatic):
+class ISalt_fresh(IAquatic):
 
     def __init__(self):
         super().__init__()
