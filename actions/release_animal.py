@@ -5,10 +5,15 @@ from animals.river_dolphin import RiverDolphin
 from animals.gold_dust_day_gecko import Gold_Dust_Day_Gecko
 from animals.nene_goose import Nene_Goose
 from animals.kikakapu import Kikakapu
+from animals.pueo import Pueo
+from animals.ulae import Ulae
+from animals.opeapea import Opeapea
+from animals.happy_face_spider import Happy_Face_Spider
+from environments.forest import Forest
 
 # Function of chosing animals to release
 def release_animal(arboretum):
-    animal_released = None
+    # animal_released = None
 
     # list of animals that are shouwn to users
     print("1. Gold Dust Day Gecko")
@@ -24,28 +29,39 @@ def release_animal(arboretum):
     choice = input("Choose animal to release > ")
     # logic that creates an instance of the class
     if choice == "1":
-        animal_released = Gold_Dust_Day_Gecko()
+        forest = Forest("f")
+        Gecko= Gold_Dust_Day_Gecko()
+        forest.add_animal(Gecko)
+        forest.listAnimal()
 
     if choice == "2":
-        animal_released = RiverDolphin()
+        pass
+        # animal_released = RiverDolphin()
 
     if choice == "3":
-        animal_released = Nene_Goose()
+        pass
+        # animal_released = Nene_Goose()
 
     if choice == "4":
-        animal_released = Kikakapu()
+        pass
+        # animal_released = Kikakapu()
+        release_animal(arboretum)
 
     if choice == "5":
-        animal_released = Pueo()
+        pass
+        # animal_released = Pueo()
 
     if choice == "6":
-        animal_released = Ulae()
+        pass
+        # animal_released = Ulae()
 
     if choice == "7":
-        animal_released = Ope_ape_a()
+        pass
+        # animal_released = Opeapea()
 
     if choice == "8":
-        animal_released = Happy_face_Spider()
+        pass
+        # animal_released = Happy_Face_Spider()
 
     # Iterates & displays through each biome and how many
     # animals are in the biome
@@ -58,5 +74,3 @@ def release_animal(arboretum):
     # adds the animal you choose to the biome
     # arboretum.rivers[int(choice) - 1].animals.append(animal)
     #  TODO: Conditional that limits animals in a biome
-
-

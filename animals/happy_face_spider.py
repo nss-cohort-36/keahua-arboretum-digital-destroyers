@@ -1,15 +1,15 @@
 from animals import Animal
 from interfaces.animal.identifiable import Identifiable
 from interfaces.animal.terrestrial import ITerrestrial
-from interfaces.animal.stagnant import Stagnant
+from interfaces.animal.stagnant import IStagnant
 
 
-class Happy_Face_Spider(Animal, Identifiable, ITerrestrial, Stagnant):
+class Happy_Face_Spider(Animal, Identifiable, ITerrestrial, IStagnant):
     def __init__(self):
         Animal.__init__(self, "Happy Face Spider")
         Identifiable.__init__(self)
         ITerrestrial.__init__(self)
-        Stagnant.__init__(self)
+        IStagnant.__init__(self)
         self.__prey = { "Insects" }
 
     #  decorator to add a read only to whats above ^ getter

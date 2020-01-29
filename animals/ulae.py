@@ -4,11 +4,11 @@ from interfaces.animal.aquatic import IAquatic
 from interfaces.animal.saltwater import ISaltwater
 
 
-class Ulae(Animal, Identifiable, IAquatic, ISaltwater):
+class Ulae(Animal, Identifiable, ISaltwater):
     def __init__(self):
         Animal.__init__(self, "Ope'ape'a")
         Identifiable.__init__(self)
-        IAquatic.__init__(self)
+        # IAquatic.__init__(self)
         ISaltwater.__init__(self)
         self.__prey = { "Insects", "Vegeation" }
 

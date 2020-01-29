@@ -7,3 +7,4 @@ from interfaces.animal.swimming import ISwimming
 from interfaces.animal.identifiable import Identifiable
 from .habitat.contains_animals import IContainsAnimals
 from .habitat.contains_plants import IContainsPlants
+from .animal.tree import ITree

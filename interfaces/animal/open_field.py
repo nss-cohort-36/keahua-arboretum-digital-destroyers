@@ -1,4 +1,4 @@
-from interfaces import ITerrestrial
+from interfaces.animal.terrestrial import ITerrestrial
 
 
 class IOpen_Field:

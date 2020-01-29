@@ -5,7 +5,7 @@ from interfaces.animal.altitudes import Altitude
 from interfaces.animal.tree import ITree
 
 
-class Opeapea(Animal, Identifiable, ITerrestrial, Altitude, ITree):
+class Opeapea(Animal, Identifiable, Altitude, ITree):
     def __init__(self):
         Animal.__init__(self, "Ope'ape'a")
         Identifiable.__init__(self)
