@@ -1,3 +1,6 @@
+from interfaces.animal.terrestrial import ITerrestrial
+
+
 class IOpen_Field:
 
     def __init__(self):
