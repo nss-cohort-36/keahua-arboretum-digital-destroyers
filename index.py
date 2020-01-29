@@ -45,9 +45,9 @@ def main_menu():
 
     if choice == "5":
         build_facility_report(keahua)
-        # pass
+        pass
 
-    # if choice != "6":
-    #     main_menu()
+    if choice != "6":
+        main_menu()
 
 main_menu()
