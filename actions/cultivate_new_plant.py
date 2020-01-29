@@ -1,4 +1,6 @@
 import os
+from plants.mountain_apple_tree import MountainAppleTree
+from arboretum import Arboretum
 
 def cultivate_new_plant (arboretum):
     plant = None
@@ -11,5 +13,6 @@ def cultivate_new_plant (arboretum):
 
     choice = input("Choose plant to cultivate > ")
     # logic that creates an instance of the class
-    # if choice == "1":
-    #     plant = MountainAppleTree()
+    if choice == "1":
+        arboretum.listPlantBiomes()
+        # plant = MountainAppleTree()
