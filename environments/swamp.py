@@ -4,6 +4,7 @@
 from interfaces import Identifiable
 from interfaces import IContainsAnimals
 from interfaces import IContainsPlants
+from interfaces.animal.stagnant import IStagnant
 
 # Defining the class river and inheriting three interfaces: IContainsAnimals, IContainsPlants, and Identifiable
 class Swamp(IContainsAnimals, IContainsPlants, Identifiable):
@@ -22,7 +23,7 @@ class Swamp(IContainsAnimals, IContainsPlants, Identifiable):
 # TODO: this needs a getter)
     def add_animal(self, animal):
         try:
-            if animal.aquatic and animal.cell_type == "hypertonic":
+            if animal.aquatic and IStagnant.dwell_type == "stillwater" and animal.cell_type == "hypertonic":
                 self.animals.append(animal)
         except AttributeError:
             raise AttributeError("Cannot add aquatic, or saltwater animals to a swamp")

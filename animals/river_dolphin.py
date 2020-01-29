@@ -2,8 +2,9 @@
 
 # TODO: Fix path
 from animals import Animal
-# from interfaces.animal import IFreshwater
-from interfaces import Identifiable
+from interfaces.animal.freshwater import IFreshwater
+from interfaces.animal.identifiable import Identifiable
+from interfaces.animal.stagnant import IStagnant
 
 class RiverDolphin(Animal, Identifiable):
 # Took out IFreshwater from initialization
@@ -13,7 +14,8 @@ class RiverDolphin(Animal, Identifiable):
     # parents classes
     def __init__(self):
         Animal.__init__(self, "River dolphin")
-        # IFreshwater.__init__(self)
+        IFreshwater.__init__(self)
+        IStagnant.__init__(self)
         Identifiable.__init__(self)
         self.__prey = { "Trout", "Mackarel", "Salmon", "Sardine" }
 
