@@ -9,6 +9,15 @@ class Arboretum:
         self.forests = []
         self.swamps = []
         self.coastlines = []
+        self.biomes = [self.rivers, self.grasslands, self.mountains, self.forests, self.swamps, self.coastlines]
+
+    def __str__(self): 
+        return(f"{self.name}")
+
+    def listBiomes(self):
+        for biome in self.biomes:
+            for instance in biome:
+                print(f"{instance} {str(instance.id)[:6]} {instance.plants} {instance.animals}")
 
     def listRivers(self):
         for river in self.rivers:

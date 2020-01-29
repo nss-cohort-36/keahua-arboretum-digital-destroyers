@@ -10,7 +10,7 @@ from arboretum import Arboretum
 
 # prints list of habitats
 def annex_habitat(arboretum):
-    os.system('cls' if os.name == 'nt' else 'clear')
+    # os.system('cls' if os.name == 'nt' else 'clear')
     # habitats that are printed
     print("1. Mountain")
     print("2. Swamp")
@@ -59,6 +59,6 @@ def annex_habitat(arboretum):
         arboretum.listCoastlines()
         annex_habitat(arboretum)
 
-    if choice == "7":
-        import index
-        index.main_menu()
+    # if choice == "7":
+    #     import index
+    #     index.main_menu()

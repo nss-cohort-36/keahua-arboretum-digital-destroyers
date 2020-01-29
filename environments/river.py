@@ -15,9 +15,8 @@ class River(IContainsAnimals, IContainsPlants, Identifiable):
       IContainsPlants.__init__(self)
       Identifiable.__init__(self)
       self.name = name
-
-    def __str__(self):
-        return(f"{self.name}")
+      self.animals = ["gerbil", "monkey", "tortoise"]
+      self.plants = ["River Jade", "Hawain Dew Drop"]
 
 # A setter that (add and fix setter decorator syntax)
 # TODO: this needs a getter)

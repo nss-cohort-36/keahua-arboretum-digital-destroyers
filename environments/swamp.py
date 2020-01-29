@@ -16,9 +16,6 @@ class Swamp(IContainsAnimals, IContainsPlants, Identifiable):
       Identifiable.__init__(self)
       self.name = name
 
-    def __str__(self):
-        return(f"{self.name}")
-
 # A setter that (add and fix setter decorator syntax)
 # TODO: this needs a getter)
     def add_animal(self, animal):
