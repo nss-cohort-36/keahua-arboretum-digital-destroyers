@@ -8,7 +8,7 @@ def build_facility_report(arboretum):
     # print("cereal")
     # print(arboretum)
     print(arboretum)
-    arboretum.listRivers()
+    arboretum.listBiomes()
     # for river in arbor.rivers:
     #     print(f'River [{river.id}]')
         # print(f'River [{river.plants}]')
