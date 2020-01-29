@@ -3,7 +3,8 @@
 # from interfaces import IAquatic
 from interfaces import Identifiable
 from interfaces import IContainsAnimals
-from interfaces import IContainsPlants
+from interfaces.habitat.contains_plants import IContainsPlants
+from interfaces.animal.freshwater import IFreshwater
 from animals import RiverDolphin
 
 # Defining the class river and inheriting three interfaces: IContainsAnimals, IContainsPlants, and Identifiable
@@ -33,4 +34,4 @@ class River(IContainsAnimals, IContainsPlants, Identifiable):
             if plant.freshwater and plant.requires_current:
                 self.plants.append(plant)
         except AttributeError:
-            raise AttributeError("Cannot add plants that require brackish water or stagnant water to a river biome")
+            raise AttributeError("Cannot add plants that require salt water or stagnant water to a river biome")

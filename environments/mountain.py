@@ -1,9 +1,10 @@
 
 
 # from interfaces import IAquatic
-from interfaces import Identifiable
-from interfaces import IContainsAnimals
-from interfaces import IContainsPlants
+from interfaces.animal.identifiable import Identifiable
+from interfaces.habitat.contains_animals import IContainsAnimals
+from interfaces.habitat.contains_plants import IContainsPlants
+from interfaces.animal.altitudes import Altitude
 
 # Defining the class river and inheriting three interfaces: IContainsAnimals, IContainsPlants, and Identifiable
 class Mountain(IContainsAnimals, IContainsPlants, Identifiable):
@@ -29,7 +30,8 @@ class Mountain(IContainsAnimals, IContainsPlants, Identifiable):
 
     def add_plant(self, plant):
         try:
-            if plant.freshwater and plant.requires_current:
+            if Altitude:
                 self.plants.append(plant)
+                print("plant has been added")
         except AttributeError:
-            raise AttributeError("Cannot add plants that require brackish water or stagnant water to a swamp biome")
+            raise AttributeError("Cannot add plants that require high altitude")
