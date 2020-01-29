@@ -8,8 +8,8 @@ from interfaces.animal.stagnant import IStagnant
 
 class RiverDolphin(Animal, Identifiable):
 # Took out IFreshwater from initialization
-    # Your defining the class river dolphin has 3 parent classes using 
-    # parents class .init instead of super.init when inheriting from 
+    # Your defining the class river dolphin has 3 parent classes using
+    # parents class .init instead of super.init when inheriting from
     # multiple classes. you must pass self as a parameter when initializing
     # parents classes
     def __init__(self):
